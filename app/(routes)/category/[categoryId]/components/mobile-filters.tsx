@@ -6,16 +6,16 @@ import { Dialog } from "@headlessui/react";
 
 import IconButton from "@/components/ui/icon-button";
 import Button from "@/components/ui/button";
-import { Color, Size } from "@/types";
+import { Color, Brand } from "@/types";
 
 import Filter from "./filter";
 
 interface MobileFiltersProps {
-  sizes: Size[];
+  brands: Brand[];
   colors: Color[];
 }
 
-const MobileFilters: React.FC<MobileFiltersProps> = ({ sizes, colors }) => {
+const MobileFilters: React.FC<MobileFiltersProps> = ({ brands, colors }) => {
   const [open, setOpen] = useState(false);
 
   const onOpen = () => setOpen(true);
@@ -46,7 +46,7 @@ const MobileFilters: React.FC<MobileFiltersProps> = ({ sizes, colors }) => {
             </div>
 
             <div className="p-4">
-              <Filter valueKey="sizeId" name="Sizes" data={sizes} />
+              <Filter valueKey="brandId" name="Brands" data={brands} />
               <Filter valueKey="colorId" name="Colors" data={colors} />
             </div>
           </Dialog.Panel>

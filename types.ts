@@ -4,7 +4,7 @@ export interface Product {
   name: string;
   price: string;
   isFeatured: boolean;
-  size: Size;
+  brand: Brand;
   color: Color;
   images: Image[];
 }
@@ -30,7 +30,7 @@ export interface Category {
   billboard: Billboard;
 }
 
-export interface Size {
+export interface Brand {
   id: string;
   name: string;
   value: string;
